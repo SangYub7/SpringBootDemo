@@ -26,20 +26,29 @@ pom.xml
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<scope>provided</scope>
 		</dependency>
+
+<code>
 application.properties
 
-  spring.datasource.url=jdbc:mariadb://localhost:3306/test
-  spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
-  spring.datasource.username=root
-  spring.datasource.password=root
-  spring.jpa.open-in-view=false
-  spring.jpa.show-sql=true
+spring.datasource.url=jdbc:mariadb://localhost:3306/test
 
-  spring.mvc.view.prefix=/WEB-INF/jsp/
-  spring.mvc.view.suffix=.jsp
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
 
+spring.datasource.username=root
 
+spring.datasource.password=root
 
+spring.jpa.open-in-view=false
+
+spring.jpa.show-sql=true
+
+spring.mvc.view.prefix=/WEB-INF/jsp/
+
+spring.mvc.view.suffix=.jsp
+
+</code>
+
+<code>
 @Controller
 public class MainController {	
 	@RequestMapping("/index")
@@ -48,3 +57,4 @@ public class MainController {
 		return "index";
 	}
 }
+</code>
